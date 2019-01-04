@@ -1,0 +1,28 @@
+﻿body {
+    background-image:url(../images/mountains.jpg);
+}
+
+div.containerr {
+    position: absolute;
+    top: 50%;
+}
+
+label.login
+{
+    color:whitesmoke;
+}
+h3.login{
+    color:whitesmoke;
+}
+
+p.login{
+    color:whitesmoke;
+}
+
+input.login{
+    width:30%
+}
+
+div.drop{
+    background-color:burlywood;
+}

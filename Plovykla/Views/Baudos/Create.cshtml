@@ -1,0 +1,49 @@
+﻿@model Plovykla.Models.Baudos
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h3 class="login">Priskirti baudą</h3>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label  class="control-label login">Aprašymas</label>
+                <input asp-for="baudosAprasymas" class="form-control" />
+                <span asp-validation-for="baudosAprasymas" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label login">Nuostolis</label>
+                <input asp-for="nuostolis" class="form-control" />
+                <span asp-validation-for="nuostolis" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label login">Data</label>
+                <input asp-for="data" class="form-control" />
+                <span asp-validation-for="data" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label  class="control-label login">Darbuotojas</label>
+                <select asp-for="vartotojoId" class ="form-control" asp-items="ViewBag.vartotojoId"></select>
+            </div>
+            <div class="form-group">
+                <label  class="control-label login">Uzsakymas</label>
+                <select asp-for="uzsakymoId" class ="form-control" asp-items="ViewBag.uzsakymoId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Priskirti" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

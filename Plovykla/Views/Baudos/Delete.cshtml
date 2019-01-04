@@ -1,0 +1,52 @@
+﻿@model Plovykla.Models.Baudos
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Baudos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.baudosAprasymas)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.baudosAprasymas)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.nuostolis)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.nuostolis)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.data)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.data)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Vartotojai)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vartotojai.vartotojoId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Uzsakymas)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Uzsakymas.uzsakymoId)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="baudosId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

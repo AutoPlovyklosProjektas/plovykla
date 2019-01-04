@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Plovykla.Models.Vartotojai>
+
+@{
+    ViewData["Title"] = "EditDarbuotojasForm";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h3>Darbuotojo redagavimas</h3>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Vardas
+            </th>
+            <th>
+                Pavarde
+            </th>
+            <th>
+                Elektroninis paštas
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.vardas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pavarde)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.vartotojoId">Redaguoti</a> |
+                <a asp-action="Delete" asp-route-id="@item.vartotojoId">Pasalinti</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

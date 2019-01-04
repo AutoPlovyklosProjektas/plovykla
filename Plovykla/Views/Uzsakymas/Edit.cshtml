@@ -1,0 +1,57 @@
+﻿@model Plovykla.Models.Uzsakymas
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Edit</h2>
+
+<h4>Uzsakymas</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="uzsakymoId" />
+            <div class="form-group">
+                <label asp-for="uzsakymo_Data" class="control-label"></label>
+                <input asp-for="uzsakymo_Data" class="form-control" />
+                <span asp-validation-for="uzsakymo_Data" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="uzsakymoKaina" class="control-label"></label>
+                <input asp-for="uzsakymoKaina" class="form-control" />
+                <span asp-validation-for="uzsakymoKaina" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="paslaugosId" class="control-label"></label>
+                <select asp-for="paslaugosId" class="form-control" asp-items="ViewBag.paslaugosId"></select>
+                <span asp-validation-for="paslaugosId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="darbuotojoId" class="control-label"></label>
+                <select asp-for="darbuotojoId" class="form-control" asp-items="ViewBag.darbuotojoId"></select>
+                <span asp-validation-for="darbuotojoId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="klientoId" class="control-label"></label>
+                <select asp-for="klientoId" class="form-control" asp-items="ViewBag.klientoId"></select>
+                <span asp-validation-for="klientoId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="busenosId" class="control-label"></label>
+                <select asp-for="busenosId" class="form-control" asp-items="ViewBag.busenosId"></select>
+                <span asp-validation-for="busenosId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

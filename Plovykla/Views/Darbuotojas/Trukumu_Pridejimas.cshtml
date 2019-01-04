@@ -1,0 +1,29 @@
+﻿@model Plovykla.Models.Trukumai
+
+@{
+    ViewData["Title"] = "Trukumu_Pridejimas";
+    Layout = "~/Views/Shared/_LayoutDarbuotojas.cshtml";
+}
+
+<h3 class="login">Trukumu Pridejimas</h3>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Trukumu_Pridejimas_fnc">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label  class="control-label">Medžiaga</label>
+                <select asp-for="medziagosId" class ="form-control" asp-items="ViewBag.medziagosId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Pridėti" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

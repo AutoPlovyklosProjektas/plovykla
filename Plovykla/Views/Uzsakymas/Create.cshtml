@@ -1,0 +1,50 @@
+﻿@model Plovykla.Models.Uzsakymas
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-offset-5">
+        <h3 class="login">Uzsakymo pridejimas</h3>
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label class="control-label login">Uzsakymo data</label>
+                <input asp-for="uzsakymo_Data" class="form-control" />
+                <span asp-validation-for="uzsakymo_Data" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label login">Kaina</label>
+                <input asp-for="uzsakymoKaina" class="form-control" />
+                <span asp-validation-for="uzsakymoKaina" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label login">Paslauga</label>
+                <select asp-for="paslaugosId" class ="form-control" asp-items="ViewBag.paslaugosId"></select>
+            </div>
+            <div class="form-group">
+                <label class="control-label login">Darbuotojas</label>
+                <select asp-for="darbuotojoId" class ="form-control" asp-items="ViewBag.darbuotojoId"></select>
+            </div>
+            <div class="form-group">
+                <label class="control-label login">Klientas</label>
+                <select asp-for="klientoId" class ="form-control" asp-items="ViewBag.klientoId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Prideti" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

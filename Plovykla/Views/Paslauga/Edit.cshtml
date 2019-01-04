@@ -1,0 +1,39 @@
+﻿@model Plovykla.Models.Paslauga
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Edit</h2>
+
+<h4>Paslauga</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="paslaugosId" />
+            <div class="form-group">
+                <label class="control-label login">Paslaugos kaina</label>
+                <input asp-for="paslaugosKaina" class="form-control" />
+                <span asp-validation-for="paslaugosKaina" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label login">Paslaugos pavadinimas</label>
+                <input asp-for="paslaugosPavadinimas" class="form-control" />
+                <span asp-validation-for="paslaugosPavadinimas" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label login">Paslaugos aprasymas</label>
+                <input asp-for="paslaugosAprasymas" class="form-control" />
+                <span asp-validation-for="paslaugosAprasymas" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Keisti" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+

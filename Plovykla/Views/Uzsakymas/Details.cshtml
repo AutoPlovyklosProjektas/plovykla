@@ -1,0 +1,55 @@
+﻿@model Plovykla.Models.Uzsakymas
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Uzsakymas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.uzsakymo_Data)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.uzsakymo_Data)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.uzsakymoKaina)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.uzsakymoKaina)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Vartotojai)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vartotojai.vartotojoId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Klientai)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Klientai.vartotojoId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Paslauga)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Paslauga.paslaugosId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Busenos)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Busenos.busenosId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.uzsakymoId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

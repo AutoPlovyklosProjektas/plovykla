@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "Paslaugu valdymas";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Paslaugu valdymas</h2>
+
+<div class="container">
+    <br />
+    <div>
+        <button class="btn btn-default">@Html.ActionLink("Paslaugos pridejimas", "Create", "Paslauga")</button>
+        <button class="btn btn-default">@Html.ActionLink("Paslaugu redagavimas", "Index", "Paslauga")</button>
+        <button class="btn btn-default">@Html.ActionLink("Pranesti apie pabaigta uzsakyma", "UzsakymoPabaiga", "Uzsakymas")</button>
+        <button class="btn btn-default">@Html.ActionLink("Priskirti darba darbuotojams", "DarbuotojoPridejimas", "Uzsakymas")</button>
+        <button class="btn btn-default">@Html.ActionLink("Patvirtinti uzsakyma", "Patvirtinti", "Uzsakymas")</button>
+        <button class="btn btn-default">@Html.ActionLink("Prideti uzsakyma", "Create", "Uzsakymas")</button>
+    </div>
+    <hr />
+
+</div>

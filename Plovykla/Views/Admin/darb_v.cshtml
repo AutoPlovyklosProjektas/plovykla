@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "darb_v";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container">
+    <br />
+    <div>
+        <button class="btn btn-default">@Html.ActionLink("Prideti darbuotoja", "CreateDarb", "Vartotojais")</button>
+        <button class="btn btn-default">@Html.ActionLink("Darbuotojo redagavimas", "EditDarbuotojasForm", "Vartotojais")</button>
+        <button class="btn btn-default">@Html.ActionLink("Priskirti bauda", "Create", "Baudos")</button>
+        <button class="btn btn-default">@Html.ActionLink("Darbuotojo analizė", "Index", "Analize")</button>
+    </div>
+    <hr />
+</div>

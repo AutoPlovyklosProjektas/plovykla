@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Plovykla.Models.Uzsakymas>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h3 class="login">Darbuotojo pridėjimas</h3>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.uzsakymo_Data)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uzsakymoKaina)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vartotojai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Klientai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Paslauga)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Busenos)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.uzsakymo_Data)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uzsakymoKaina)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vartotojai.vartotojoId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Klientai.vartotojoId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Paslauga.paslaugosId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Busenos.busenosId)
+            </td>
+            <td>
+                <form asp-action="PridetiDarb">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" name="uzsakymoId" id="uzsakymoId" value="@item.uzsakymoId" />
+                    <input type="submit" name="Submit" value="Baigti" />
+                </form>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,49 @@
+﻿@model Plovykla.Models.Baudos
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Baudos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.baudosAprasymas)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.baudosAprasymas)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.nuostolis)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.nuostolis)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.data)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.data)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Vartotojai)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vartotojai.vartotojoId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Uzsakymas)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Uzsakymas.uzsakymoId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.baudosId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

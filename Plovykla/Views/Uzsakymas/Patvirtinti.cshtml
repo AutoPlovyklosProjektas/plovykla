@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Plovykla.Models.Uzsakymas>
+
+@{
+    ViewData["Title"] = "Patvirtinti";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h3 class="login">Patvirtinti užsakymą</h3>
+
+<p>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Uzsakymo data
+            </th>
+            <th>
+                Kaina
+            </th>
+            <th>
+                Darbuotojas
+            </th>
+            <th>
+                Klientas
+            </th>
+            <th>
+                Paslauga
+            </th>
+            <th>
+                Busena
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.uzsakymo_Data)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uzsakymoKaina)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vartotojai.vartotojoId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Klientai.vartotojoId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Paslauga.paslaugosId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Busenos.busenosId)
+            </td>
+            <td>
+                <form asp-action="PatvirtintiAct">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" name="uzsakymoId" id="uzsakymoId" value="@item.uzsakymoId" />
+                    <input type="submit" name="Submit" value="Patvirtinti" />
+                </form>
+                   
+                
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

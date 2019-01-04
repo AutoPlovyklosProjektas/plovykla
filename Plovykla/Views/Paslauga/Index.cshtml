@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Plovykla.Models.Paslauga>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Index</h2>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Paslaugos kaina
+            </th>
+            <th>
+                Paslaugos pavadinimas
+            </th>
+            <th>
+                Paslaugos aprasymas
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.paslaugosKaina)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.paslaugosPavadinimas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.paslaugosAprasymas)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.paslaugosId">Redaguoti</a> 
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

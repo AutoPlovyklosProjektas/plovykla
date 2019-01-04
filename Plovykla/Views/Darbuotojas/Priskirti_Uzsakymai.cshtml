@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "Priskirti_Uzsakymai";
+    Layout = "~/Views/Shared/_LayoutDarbuotojas.cshtml";
+}
+
+<h3 class="login">PriskirtiUzsakymai</h3>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Paslaugos pavadinimas</th>
+            <th scope="col">Data</th>
+            <th scope="col">Uzdirbta</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in @ViewBag.uzsakymai)
+        {
+            <tr>
+                <th scope="row">@x.paslaugosPavadinimas</th>
+                <th scope="row">@x.uzsakymo_Data</th>
+                <th scope="row">@x.uzsakymoKaina</th>
+            </tr>
+        }
+    </tbody>
+</table>

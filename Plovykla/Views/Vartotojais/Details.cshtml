@@ -1,0 +1,54 @@
+﻿@model Plovykla.Models.Vartotojai
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Vartotojai</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.username)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.username)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.password)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.password)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.vardas)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.vardas)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.pavarde)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.pavarde)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Kategorija)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Kategorija.kategorijosId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.vartotojoId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
