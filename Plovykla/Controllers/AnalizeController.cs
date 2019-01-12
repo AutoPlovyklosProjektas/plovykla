@@ -73,9 +73,9 @@ namespace Plovykla.Controllers
                 });
             }
             //Apsiskaiciuoju kokia bendra alga
-            double pirmineSuma = uzsakymai.Sum(x => x.uzsakymoKaina);
+            double? pirmineSuma = uzsakymai.Sum(x => x.uzsakymoKaina);
             double baudosSuma = bauda.Sum(x => x.b_nuostolis);
-            double bendraAlga = pirmineSuma - baudosSuma;
+            double? bendraAlga = pirmineSuma - baudosSuma;
 
             //Darau, kad galeciau i views persidet duomenis
             ViewData["alga"] = bendraAlga;
