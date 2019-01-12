@@ -1,11 +1,11 @@
 ﻿@model IEnumerable<Plovykla.Models.Paslauga>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Paslaugos";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Paslaugos</h2>
 
 
 <table class="table">
@@ -36,7 +36,8 @@
                 @Html.DisplayFor(modelItem => item.paslaugosAprasymas)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.paslaugosId">Redaguoti</a> 
+                <a asp-action="Edit" asp-route-id="@item.paslaugosId">Redaguoti</a>|
+                <a asp-action="Delete" asp-route-id="@item.paslaugosId">Pašalinti</a>
             </td>
         </tr>
 }

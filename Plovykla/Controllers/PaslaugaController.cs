@@ -43,8 +43,9 @@ namespace Plovykla.Controllers
         }
 
         // GET: Paslauga/Create
-        public IActionResult Create()
+        public IActionResult Create(string success)
         {
+            ViewBag.success = success;
             return View();
         }
 
@@ -59,7 +60,8 @@ namespace Plovykla.Controllers
             {
                 _context.Add(paslauga);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                //ViewData["CreateSuccess"] = "Paslaugos pridėjimas sėkmingas.";
+                return RedirectToAction(nameof(Create), new { success = "Paslaugos pridėjimas sėkmingas." });
             }
             return View(paslauga);
         }

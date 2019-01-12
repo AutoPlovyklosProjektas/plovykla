@@ -26,7 +26,7 @@
                 <span asp-validation-for="paslaugosPavadinimas" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label  class="control-label login">Aprasymas</label>
+                <label class="control-label login">Aprasymas</label>
                 <input asp-for="paslaugosAprasymas" class="form-control" />
                 <span asp-validation-for="paslaugosAprasymas" class="text-danger"></span>
             </div>
@@ -34,6 +34,7 @@
                 <input type="submit" value="Prideti" class="btn btn-default" />
             </div>
         </form>
+        @ViewBag.success
     </div>
 </div>
 
