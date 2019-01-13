@@ -1,13 +1,13 @@
 ﻿@model Plovykla.Models.Baudos
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Baudos redagavimas";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>Edit</h2>
+<h2>Baudos redagavimas</h2>
 
-<h4>Baudos</h4>
+<h4>Bauda</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -40,13 +40,13 @@
                 <span asp-validation-for="uzsakymoId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Išsaugoti" class="btn btn-default" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Atgal į sąrašą</a>
 </div>
 

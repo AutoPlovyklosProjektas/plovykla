@@ -11,10 +11,21 @@ namespace Plovykla.Models
     {
         [Key]
         public int vartotojoId { get; set; }
+        [Required(ErrorMessage = "Laukas '{0}' neužpildytas.")]
+        [Display(Name = "Prisijungimo vardas")]
         public string username { get; set; }
+        [Required(ErrorMessage = "Laukas '{0}' neužpildytas.")]
+        [Display(Name = "Slaptažodis")]
         public string password { get; set; }
+        [Required(ErrorMessage = "Laukas '{0}' neužpildytas.")]
+        [Display(Name = "Vardas")]
         public string vardas { get; set; }
+        [Required(ErrorMessage = "Laukas '{0}' neužpildytas.")]
+        [Display(Name = "Pavardė")]
         public string pavarde { get; set; }
+        [Required(ErrorMessage = "Laukas '{0}' neužpildytas.")]
+        [Display(Name = "Elektroninis paštas")]
+        [RegularExpression(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$", ErrorMessage = "Netinkamas elektroninis paštas.")]
         public string email { get; set; }
         public int kategorijosId { get; set; }
 

@@ -11,9 +11,16 @@ namespace Plovykla.Models
     {
         [Key]
         public int baudosId { get; set; }
+        [Required(ErrorMessage = "Laukas '{0}' neužpildytas.")]
+        [Display(Name = "Aprašymas")]
         public string baudosAprasymas { get; set; }
-        public double nuostolis { get; set; }
-        public DateTime data { get; set; }
+        [Required(ErrorMessage = "Laukas '{0}' neužpildytas.")]
+        [Display(Name = "Nuostolis")]
+        [Range(1, 999999.99, ErrorMessage = "Įrašykite nuostolių kainą nuo 1.00 iki 999999.99")]
+        public double? nuostolis { get; set; }
+        [Required(ErrorMessage = "Nepasirinkta data.")]
+        [DateTimeRange]
+        public DateTime? data { get; set; }
         public int vartotojoId { get; set; }
         public int uzsakymoId { get; set; }
 

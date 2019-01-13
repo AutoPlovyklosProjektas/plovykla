@@ -65,7 +65,7 @@ using Plovykla.Models;
             WriteLiteral("<h3 class=\"login\">Jūsų analizė</h3>\r\n<div class=\"row\">\r\n    <div class=\"col-md-4\">\r\n        ");
             EndContext();
             BeginContext(195, 612, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e6da4c304d094584823fce70374fbe77", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "aca8ad3a029b4da7a22b2df5db22a966", async() => {
                 BeginContext(233, 567, true);
                 WriteLiteral(@"
             <div class=""form-group"">

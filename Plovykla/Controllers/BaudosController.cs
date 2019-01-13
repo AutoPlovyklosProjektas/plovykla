@@ -66,8 +66,10 @@ namespace Plovykla.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["uzsakymoId"] = new SelectList(_context.Uzsakymas, "uzsakymoId", "uzsakymoId", baudos.uzsakymoId);
-            ViewData["vartotojoId"] = new SelectList(_context.Vartotojais, "vartotojoId", "vartotojoId", baudos.vartotojoId);
+            //ViewData["uzsakymoId"] = new SelectList(_context.Uzsakymas, "uzsakymoId", "uzsakymoId", baudos.uzsakymoId);
+            //ViewData["vartotojoId"] = new SelectList(_context.Vartotojais, "vartotojoId", "vartotojoId", baudos.vartotojoId);
+            ViewData["uzsakymoId"] = new SelectList(_context.Uzsakymas, "uzsakymoId", "uzsakymoId");
+            ViewData["vartotojoId"] = new SelectList(_context.Vartotojais.Where(s => s.kategorijosId == 2), "vartotojoId", "vardas");
             return View(baudos);
         }
 
@@ -84,8 +86,10 @@ namespace Plovykla.Controllers
             {
                 return NotFound();
             }
-            ViewData["uzsakymoId"] = new SelectList(_context.Uzsakymas, "uzsakymoId", "uzsakymoId", baudos.uzsakymoId);
-            ViewData["vartotojoId"] = new SelectList(_context.Vartotojais, "vartotojoId", "vartotojoId", baudos.vartotojoId);
+            //ViewData["uzsakymoId"] = new SelectList(_context.Uzsakymas, "uzsakymoId", "uzsakymoId", baudos.uzsakymoId);
+            //ViewData["vartotojoId"] = new SelectList(_context.Vartotojais, "vartotojoId", "vartotojoId", baudos.vartotojoId);
+            ViewData["uzsakymoId"] = new SelectList(_context.Uzsakymas, "uzsakymoId", "uzsakymoId");
+            ViewData["vartotojoId"] = new SelectList(_context.Vartotojais.Where(s => s.kategorijosId == 2), "vartotojoId", "vardas");
             return View(baudos);
         }
 
@@ -121,8 +125,10 @@ namespace Plovykla.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["uzsakymoId"] = new SelectList(_context.Uzsakymas, "uzsakymoId", "uzsakymoId", baudos.uzsakymoId);
-            ViewData["vartotojoId"] = new SelectList(_context.Vartotojais, "vartotojoId", "vartotojoId", baudos.vartotojoId);
+            //ViewData["uzsakymoId"] = new SelectList(_context.Uzsakymas, "uzsakymoId", "uzsakymoId", baudos.uzsakymoId);
+            //ViewData["vartotojoId"] = new SelectList(_context.Vartotojais, "vartotojoId", "vartotojoId", baudos.vartotojoId);
+            ViewData["uzsakymoId"] = new SelectList(_context.Uzsakymas, "uzsakymoId", "uzsakymoId");
+            ViewData["vartotojoId"] = new SelectList(_context.Vartotojais.Where(s => s.kategorijosId == 2), "vartotojoId", "vardas");
             return View(baudos);
         }
 

@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Plovykla.Models.Uzsakymas>
 
 @{
-    ViewData["Title"] = "UzsakymoPabaiga";
+    ViewData["Title"] = "Uzsakymo pabaigimas";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
@@ -56,7 +56,7 @@
             <td>
                 <form asp-action="uzsakymoPabaigimas">
                     <input type ="hidden" name="uzsakymoId" value="@item.uzsakymoId"/>
-                    <input type ="submit" name="submit" value="Baigti!"/>
+                    <input type ="submit" name="submit" value="Baigti"/>
                 </form>
             </td>
         </tr>

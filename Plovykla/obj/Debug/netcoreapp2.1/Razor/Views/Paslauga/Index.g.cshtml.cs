@@ -123,7 +123,7 @@ using Plovykla.Models;
             WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
             EndContext();
             BeginContext(911, 67, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "121c3145cd794d5f81f0b2b5327fa20c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5f75972546ab476eb787b15e2fd89481", async() => {
                 BeginContext(965, 9, true);
                 WriteLiteral("Redaguoti");
                 EndContext();
@@ -158,7 +158,7 @@ using Plovykla.Models;
             WriteLiteral("|\r\n                ");
             EndContext();
             BeginContext(997, 69, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b567722761534490b3b79660096ccacf", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "96eb2052331c4906bb098943391d1ecc", async() => {
                 BeginContext(1053, 9, true);
                 WriteLiteral("Pašalinti");
                 EndContext();

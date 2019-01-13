@@ -9,7 +9,7 @@ namespace Plovykla.Models
     {
             public string paslauga { get; set; }
             public string aprasymas { get; set; }
-            public DateTime b_data { get; set; }
-            public double b_nuostolis { get; set; }
+            public DateTime? b_data { get; set; }
+            public double? b_nuostolis { get; set; }
     }
 }

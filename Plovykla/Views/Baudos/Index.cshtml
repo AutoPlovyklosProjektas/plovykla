@@ -5,10 +5,10 @@
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Baudų sąrašas</h2>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Pridėti naują baudą</a>
 </p>
 <table class="table">
     <thead>
@@ -50,9 +50,9 @@
                 @Html.DisplayFor(modelItem => item.Uzsakymas.uzsakymoId)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.baudosId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.baudosId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.baudosId">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.baudosId">Redaguoti</a> |
+                <a asp-action="Details" asp-route-id="@item.baudosId">Detalės</a> |
+                <a asp-action="Delete" asp-route-id="@item.baudosId">Šalinti</a>
             </td>
         </tr>
 }

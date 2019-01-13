@@ -2,13 +2,14 @@
 
 @{
     ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>Delete</h2>
+<h2>Šalinimas</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Are esate tikras, kad norite pašalinti darbuotoją?</h3>
 <div>
-    <h4>Vartotojai</h4>
+    <h4>Vartotojo duomenys</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -51,7 +52,7 @@
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="vartotojoId" />
-        <input type="submit" value="Delete" class="btn btn-default" /> |
-        <a asp-action="Index">Back to List</a>
+        <input type="submit" value="Pašalinti" class="btn btn-default" /> |
+        <a asp-action="Index">Atgal į sąrašą</a>
     </form>
 </div>

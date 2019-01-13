@@ -20,6 +20,12 @@ namespace Plovykla.Controllers
             ViewData["darbuotojai"] = new SelectList(_context.Vartotojais.Where(s => s.kategorijosId == 2), "vartotojoId", "vardas");
             return View();
         }
+
+        public IActionResult Vartotojo_Analize()
+        {
+            return View();
+        }
+
         [HttpPost,ActionName("Vartotojo_Analize")]
         [ValidateAntiForgeryToken]
         public IActionResult Vartotojo_Analize([Bind("data_nuo,data_iki,vartotojoId")]Analizei anal)
@@ -74,7 +80,7 @@ namespace Plovykla.Controllers
             }
             //Apsiskaiciuoju kokia bendra alga
             double? pirmineSuma = uzsakymai.Sum(x => x.uzsakymoKaina);
-            double baudosSuma = bauda.Sum(x => x.b_nuostolis);
+            double? baudosSuma = bauda.Sum(x => x.b_nuostolis);
             double? bendraAlga = pirmineSuma - baudosSuma;
 
             //Darau, kad galeciau i views persidet duomenis
@@ -87,5 +93,7 @@ namespace Plovykla.Controllers
 
             return View();
         }
+
+        
     }
 }

@@ -9,9 +9,6 @@ namespace Plovykla.Models
 {
     public class Uzsakymas
     {
-        private DateTime now = DateTime.Now;
-        private DateTime date = new DateTime(2008, 8, 29, 19, 27, 15);
-
         [Key]
         public int uzsakymoId { get; set; }
         [Required(ErrorMessage = "Nepasirinkta data.")]

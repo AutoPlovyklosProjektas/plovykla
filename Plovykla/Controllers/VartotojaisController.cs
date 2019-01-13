@@ -71,8 +71,9 @@ namespace Plovykla.Controllers
             return View(vartotojai);
         }
 
-        public IActionResult CreateDarb()
+        public IActionResult CreateDarb(string success)
         {
+            ViewBag.success = success;
             try
             {
                string error =  HttpContext.Session.GetString("errorCreateDarb");
@@ -85,9 +86,9 @@ namespace Plovykla.Controllers
             return View();
         }
 
-        [HttpPost,ActionName("CreateDarbAct")]
+        [HttpPost,ActionName("CreateDarb")]
         [ValidateAntiForgeryToken]
-        public IActionResult CreateDarbAct([Bind("vartotojoId,username,password,vardas,pavarde,email")] Vartotojai vartotojai)
+        public IActionResult CreateDarb([Bind("vartotojoId,username,password,vardas,pavarde,email")] Vartotojai vartotojai)
         {
             if (ModelState.IsValid)
             {
@@ -103,7 +104,7 @@ namespace Plovykla.Controllers
                     vartotojai.kategorijosId = 2;
                     _context.Add(vartotojai);
                     _context.SaveChangesAsync();
-                    return RedirectToAction("darb_v", "Admin");
+                    return RedirectToAction(nameof(CreateDarb), new { success = "Naujo darbuotojo pridėjimas sėkmingas." });
                 }
 
                 else
@@ -127,7 +128,7 @@ namespace Plovykla.Controllers
                 }
 
             }
-           return RedirectToAction("darb_v", "Admin");
+           return View(vartotojai);
         }
         #endregion
 
@@ -222,7 +223,7 @@ namespace Plovykla.Controllers
             var vartotojai = await _context.Vartotojais.FindAsync(id);
             _context.Vartotojais.Remove(vartotojai);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(EditDarbuotojasForm));
         }
         #endregion
         private bool VartotojaiExists(int id)
