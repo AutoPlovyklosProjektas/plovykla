@@ -1,22 +1,20 @@
 ﻿@model IEnumerable<Plovykla.Models.Vartotojai>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Darbuotojai";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Darbuotojai</h2>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="CreateDarb">Pridėti Darbuotoją</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.username)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.password)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.vardas)
@@ -26,9 +24,6 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Kategorija)
             </th>
             <th></th>
         </tr>
@@ -40,9 +35,6 @@
                 @Html.DisplayFor(modelItem => item.username)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.password)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.vardas)
             </td>
             <td>
@@ -52,12 +44,8 @@
                 @Html.DisplayFor(modelItem => item.email)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Kategorija.kategorijosId)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.vartotojoId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.vartotojoId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.vartotojoId">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.vartotojoId">Redaguoti</a> |
+                <a asp-action="Delete" asp-route-id="@item.vartotojoId">Pašalinti</a>
             </td>
         </tr>
 }

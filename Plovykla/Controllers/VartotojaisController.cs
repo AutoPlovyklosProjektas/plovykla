@@ -23,7 +23,8 @@ namespace Plovykla.Controllers
         public async Task<IActionResult> Index()
         {
             var sistemosCtx = _context.Vartotojais.Include(v => v.Kategorija);
-            return View(await sistemosCtx.ToListAsync());
+            var vartotojai = _context.Vartotojais.Where(s => s.kategorijosId == 2);
+            return View(vartotojai.ToList());
         }
 
         // GET: Vartotojais/Details/5
@@ -161,6 +162,14 @@ namespace Plovykla.Controllers
             if (id != vartotojai.vartotojoId)
             {
                 return NotFound();
+            }
+
+            vartotojai.kategorijosId = 2;
+
+            if (ModelState.ErrorCount <= 2)
+            {
+                ModelState.Remove("username");
+                ModelState.Remove("password");
             }
 
             if (ModelState.IsValid)

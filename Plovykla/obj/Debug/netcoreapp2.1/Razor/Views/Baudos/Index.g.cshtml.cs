@@ -67,7 +67,7 @@ using Plovykla.Models;
             WriteLiteral("\r\n<h2>Baudų sąrašas</h2>\r\n\r\n<p>\r\n    ");
             EndContext();
             BeginContext(176, 46, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f58381d43b8e48eeab04e35fde3ce6a1", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "108274ca357c464dbb29ff5fa91b2ab8", async() => {
                 BeginContext(199, 19, true);
                 WriteLiteral("Pridėti naują baudą");
                 EndContext();
@@ -197,7 +197,7 @@ using Plovykla.Models;
             WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
             EndContext();
             BeginContext(1457, 64, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3fc074b6aadf4ad98debb45ca93cfec9", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c02c9024743a464682d147f3e615e3ab", async() => {
                 BeginContext(1508, 9, true);
                 WriteLiteral("Redaguoti");
                 EndContext();
@@ -232,7 +232,7 @@ using Plovykla.Models;
             WriteLiteral(" |\r\n                ");
             EndContext();
             BeginContext(1541, 65, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "48d527ca522643508ee63c9ad7bcb694", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9aebbd7c274b4b54a67d0e9360462012", async() => {
                 BeginContext(1595, 7, true);
                 WriteLiteral("Detalės");
                 EndContext();
@@ -267,7 +267,7 @@ using Plovykla.Models;
             WriteLiteral(" |\r\n                ");
             EndContext();
             BeginContext(1626, 64, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "97532fbf14f447458a012ba98f77663a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1be00836c4d046d8a5d4d42dd1a18b11", async() => {
                 BeginContext(1679, 7, true);
                 WriteLiteral("Šalinti");
                 EndContext();

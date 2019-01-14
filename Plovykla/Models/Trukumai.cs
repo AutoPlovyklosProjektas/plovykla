@@ -11,6 +11,7 @@ namespace Plovykla.Models
     {
         [Key]
         public int trukumoId { get; set; }
+        [Display(Name = "Medžiaga")]
         public int medziagosId { get; set; }
 
         //[ForeignKey("medziagosId")]

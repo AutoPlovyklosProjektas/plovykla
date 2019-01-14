@@ -65,7 +65,7 @@ using Plovykla.Models;
             WriteLiteral("\r\n<h2>Trūkstamos medžiagos</h2>\r\n\r\n<p>\r\n    ");
             EndContext();
             BeginContext(185, 53, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7cc76ffbc71a438189b1f48ac8362bb7", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0d4edd13eb0f4b828987602bab2c9013", async() => {
                 BeginContext(208, 26, true);
                 WriteLiteral("Pridėti trūkstamą medžiagą");
                 EndContext();
@@ -115,7 +115,7 @@ using Plovykla.Models;
             WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
             EndContext();
             BeginContext(651, 67, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ecb96b850ee54691a65774806e47e775", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c8ac4d4b85d0472e8e5a39c7d88adbef", async() => {
                 BeginContext(705, 9, true);
                 WriteLiteral("Uzsakyta!");
                 EndContext();

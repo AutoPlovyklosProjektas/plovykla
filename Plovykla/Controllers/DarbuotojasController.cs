@@ -139,31 +139,38 @@ namespace Plovykla.Controllers
         #endregion
 
         #region info keitimas
-        public ActionResult InfoKeitimas()
+        public ActionResult InfoKeitimas(string success)
         {
             Vartotojai vartotojai = getVart();
-           
+            ViewBag.success = success;
             return View(vartotojai);
         }
 
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Editas([Bind("vartotojoId,vardas,pavarde,email")] Vartotojai vartotojai)
+        public ActionResult InfoKeitimas([Bind("vartotojoId,vardas,pavarde,email")] Vartotojai vartotojai)
         {
             Vartotojai vart = getVart();
             vart.vardas = vartotojai.vardas;
             vart.pavarde = vartotojai.pavarde;
             vart.email = vartotojai.email;
 
+            if(ModelState.ErrorCount <= 2)
+            {
+                ModelState.Remove("username");
+                ModelState.Remove("password");
+            }
+
             if (ModelState.IsValid)
             {
                 vartotojai.kategorijosId = 2;
                 _context.Update(vart);
                  _context.SaveChanges();
+                return RedirectToAction(nameof(InfoKeitimas), new { success = "Informacijos pakeitimas sėkmingas." });
             }
-
-            return RedirectToAction("InfoKeitimas", "Darbuotojas");
+            
+            return View(vartotojai);
         }
         #endregion
 
@@ -191,6 +198,7 @@ namespace Plovykla.Controllers
 
 
         #endregion
+
         public Vartotojai getVart()
         {
             try
