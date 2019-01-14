@@ -64,7 +64,7 @@ using Plovykla.Models;
             WriteLiteral("<h3 class=\"login\">Darbuotojo analizė</h3>\r\n<div class=\"row\">\r\n    <div class=\"col-md-4\">\r\n        ");
             EndContext();
             BeginContext(226, 840, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "60519f8ef6c14e4eb17886a45e0b6edf", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9d9e15c17b9e41eba11b86984b10240a", async() => {
                 BeginContext(263, 532, true);
                 WriteLiteral(@"
             <div class=""form-group"">
@@ -80,7 +80,7 @@ using Plovykla.Models;
                 ");
                 EndContext();
                 BeginContext(795, 92, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "46fe8b7e2a484d17a2cd8c8f924463de", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ca8615264afc4aba9d2e3d57d6cfc5e8", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.SelectTagHelper>();

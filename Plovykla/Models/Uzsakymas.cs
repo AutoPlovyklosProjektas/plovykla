@@ -46,13 +46,16 @@ namespace Plovykla.Models
         {
             if (value == null)
             {
-                value = DateTime.Now.AddYears(-1);
+                value = DateTime.Now.AddYears(-9999);
             }
             else {
                 value = (DateTime)value;
             }
 
-            if (DateTime.Now.AddYears(999).CompareTo(value) <= 0 && DateTime.Now.CompareTo(value) >= 0)
+            int lessThanMax = DateTime.Now.AddYears(9).CompareTo(value);
+            int moreThanMin = DateTime.Now.AddDays(-1).CompareTo(value);
+
+            if (lessThanMax >= 0 && moreThanMin <= 0)
             {
                 return ValidationResult.Success;
             }

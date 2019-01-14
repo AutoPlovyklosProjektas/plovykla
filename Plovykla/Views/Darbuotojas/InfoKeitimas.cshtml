@@ -15,17 +15,27 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="vartotojoId" />
             <div class="form-group">
+                <label class="control-label login">Prisijungimo vardas</label>
+                <input asp-for="username" class="form-control" />
+                <span asp-validation-for="username" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label login">Slaptažodis</label>
+                <input asp-for="password" class="form-control" />
+                <span asp-validation-for="password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label class="control-label login">Vardas</label>
                 <input asp-for="vardas" class="form-control" />
                 <span asp-validation-for="vardas" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label  class="control-label login">Pavarde</label>
+                <label class="control-label login">Pavarde</label>
                 <input asp-for="pavarde" class="form-control" />
                 <span asp-validation-for="pavarde" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label  class="control-label login">Elektroninis paštas</label>
+                <label class="control-label login">Elektroninis paštas</label>
                 <input asp-for="email" class="form-control" />
                 <span asp-validation-for="email" class="text-danger"></span>
             </div>

@@ -46,8 +46,9 @@ namespace Plovykla.Controllers
         }
 
         // GET: Baudos/Create
-        public IActionResult Create()
+        public IActionResult Create(string success)
         {
+            ViewBag.success = success;
             ViewData["uzsakymoId"] = new SelectList(_context.Uzsakymas, "uzsakymoId", "uzsakymoId");
             ViewData["vartotojoId"] = new SelectList(_context.Vartotojais.Where(s=>s.kategorijosId ==2), "vartotojoId", "vardas");
             return View();
@@ -64,7 +65,7 @@ namespace Plovykla.Controllers
             {
                 _context.Add(baudos);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Create), new { success = "Baudos redagavimas sėkmingas." });
             }
             //ViewData["uzsakymoId"] = new SelectList(_context.Uzsakymas, "uzsakymoId", "uzsakymoId", baudos.uzsakymoId);
             //ViewData["vartotojoId"] = new SelectList(_context.Vartotojais, "vartotojoId", "vartotojoId", baudos.vartotojoId);

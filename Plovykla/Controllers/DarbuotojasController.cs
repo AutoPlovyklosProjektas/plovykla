@@ -149,18 +149,20 @@ namespace Plovykla.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult InfoKeitimas([Bind("vartotojoId,vardas,pavarde,email")] Vartotojai vartotojai)
+        public ActionResult InfoKeitimas([Bind("vartotojoId,username,password,vardas,pavarde,email")] Vartotojai vartotojai)
         {
             Vartotojai vart = getVart();
+            vart.username = vartotojai.username;
+            vart.password = vartotojai.password;
             vart.vardas = vartotojai.vardas;
             vart.pavarde = vartotojai.pavarde;
             vart.email = vartotojai.email;
 
-            if(ModelState.ErrorCount <= 2)
-            {
-                ModelState.Remove("username");
-                ModelState.Remove("password");
-            }
+            //if(ModelState.ErrorCount <= 2)
+            //{
+            //    ModelState.Remove("username");
+            //    ModelState.Remove("password");
+            //}
 
             if (ModelState.IsValid)
             {

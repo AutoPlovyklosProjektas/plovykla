@@ -78,6 +78,17 @@ namespace Plovykla.Controllers
             }
            // return RedirectToAction("Index", "Vartotojais");
         }
+
+        #region atsijungimas
+
+        public ActionResult LogOut()
+        {
+            //Session.Abandon();
+            HttpContext.Session.Clear();
+            return RedirectToAction("Index", "Login");
+        }
+
+        #endregion
     }
-    
+
 }
