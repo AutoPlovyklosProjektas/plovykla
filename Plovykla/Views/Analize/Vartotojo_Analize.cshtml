@@ -4,52 +4,52 @@
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<center>
-    <h3 class="login"> @ViewBag.VartotojoObj.vardas  @ViewBag.VartotojoObj.pavarde analize </h3>
-</center>
+    <center>
+        <h3 class="login"> @ViewBag.VartotojoObj.vardas  @ViewBag.VartotojoObj.pavarde analize </h3>
+    </center>
 
-<h3>Bendra alga per pasirinkta laikotarpi: @ViewBag.alga eur. </h3>
+    <h3>Bendra alga per pasirinkta laikotarpi: @ViewBag.alga eur. </h3>
 
-<h4>Atlikti darbai: </h4>
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th scope="col">Paslaugos pavadinimas</th>
-            <th scope="col">Data</th>
-            <th scope="col">Uzdirbta</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var x in @ViewBag.uzsakymai)
-        {
+    <h4>Atlikti darbai: </h4>
+    <table class="table table-striped">
+        <thead>
             <tr>
-                <th scope="row">@x.paslaugosPavadinimas</th>
-                <th scope="row">@x.uzsakymo_Data</th>
-                <th scope="row">@x.uzsakymoKaina</th>
+                <th scope="col">Paslaugos pavadinimas</th>
+                <th scope="col">Data</th>
+                <th scope="col">Uzdirbta</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var x in @ViewBag.uzsakymai)
+            {
+                <tr>
+                    <th scope="row">@x.paslaugosPavadinimas</th>
+                    <th scope="row">@x.uzsakymo_Data</th>
+                    <th scope="row">@x.uzsakymoKaina</th>
+                </tr>
+            }
+        </tbody>
+    </table>
 
-<h4>Baudos: </h4>
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th scope="col">Paslauga</th>
-            <th scope="col">Aprasymas</th>
-            <th scope="col">Data</th>
-            <th scope="col">Nuostolis</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var x in @ViewBag.baudos)
-        {
+    <h4>Baudos: </h4>
+    <table class="table table-striped">
+        <thead>
             <tr>
-                <th scope="row">@x.paslauga</th>
-                <th scope="row">@x.aprasymas</th>
-                <th scope="row">@x.b_data</th>
-                <th scope="row">@x.b_nuostolis</th>
+                <th scope="col">Paslauga</th>
+                <th scope="col">Aprasymas</th>
+                <th scope="col">Data</th>
+                <th scope="col">Nuostolis</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var x in @ViewBag.baudos)
+            {
+                <tr>
+                    <th scope="row">@x.paslauga</th>
+                    <th scope="row">@x.aprasymas</th>
+                    <th scope="row">@x.b_data</th>
+                    <th scope="row">@x.b_nuostolis</th>
+                </tr>
+            }
+        </tbody>
+    </table>

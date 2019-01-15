@@ -20,7 +20,7 @@
     <div class="center-block">
 
         <partial name="_CookieConsentPartial" />
-        <div class="container body-content">
+        <div class="container body-content" style="background-color:darkgray">
             @RenderBody()
             <hr />
             <footer>
@@ -28,9 +28,8 @@
                     <div class="col-md-offset-5">
                         <p class="login">&copy; 2018 - Plovykla</p>
                     </div>
-                    
+
                 </div>
-                
 
             </footer>
         </div>
@@ -58,6 +57,6 @@
 
         @RenderSection("Scripts", required: false)
 
-            </div>
+    </div>
 </body>
 </html>

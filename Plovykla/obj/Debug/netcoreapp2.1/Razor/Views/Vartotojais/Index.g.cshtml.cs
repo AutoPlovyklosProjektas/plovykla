@@ -66,7 +66,7 @@ using Plovykla.Models;
             WriteLiteral("\r\n<h2>Darbuotojai</h2>\r\n\r\n<p>\r\n    ");
             EndContext();
             BeginContext(184, 49, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4bdf066aa0ea44ba976ee57324b75109", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f55639a48a7849a5834cf7ad1aa2ad6d", async() => {
                 BeginContext(211, 18, true);
                 WriteLiteral("Pridėti Darbuotoją");
                 EndContext();
@@ -176,7 +176,7 @@ using Plovykla.Models;
             WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
             EndContext();
             BeginContext(1220, 67, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "03fe7c6b03d34b46a0510a6fb8bb7b13", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0e1e05f2e23046899ad82949a0455e61", async() => {
                 BeginContext(1274, 9, true);
                 WriteLiteral("Redaguoti");
                 EndContext();
@@ -211,7 +211,7 @@ using Plovykla.Models;
             WriteLiteral(" |\r\n                ");
             EndContext();
             BeginContext(1307, 69, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a5c04e40133b4d059a35feb26bb0647a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8788d03255b04ac2a5a017c704d899b6", async() => {
                 BeginContext(1363, 9, true);
                 WriteLiteral("Pašalinti");
                 EndContext();

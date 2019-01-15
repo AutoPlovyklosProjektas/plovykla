@@ -3,26 +3,27 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
-<h3 class="login">Darbuotojo analizė</h3>
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Vartotojo_Analize">
-            <div class="form-group">
-                <label  class="control-label">Pasirinkiti data nuo:</label>
-                <input type="date" name="data_nuo" class="form-control" />
-            </div>
-            <div class="form-group">
-                <label lass="control-label">Pasirinkiti data iki:</label>
-                <input type="date" name="data_iki"  class="form-control" />
-            </div>
-            <div class="form-group">
-                <label>Pasirinkite darbuotoja</label>
-                <select asp-for="vartotojoId" class="form-control" asp-items="ViewBag.darbuotojai"></select>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Peržiūrėti" class="btn btn-default" />
-            </div>
-        </form>
+
+    <h3 class="login">Darbuotojo analizė</h3>
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Vartotojo_Analize">
+                <div class="form-group">
+                    <label class="control-label">Pasirinkiti data nuo:</label>
+                    <input type="date" name="data_nuo" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label lass="control-label">Pasirinkiti data iki:</label>
+                    <input type="date" name="data_iki" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Pasirinkite darbuotoja</label>
+                    <select asp-for="vartotojoId" class="form-control" asp-items="ViewBag.darbuotojai"></select>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Peržiūrėti" class="btn btn-default" />
+                </div>
+            </form>
+        </div>
     </div>
-</div>
 

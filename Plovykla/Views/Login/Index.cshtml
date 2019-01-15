@@ -5,45 +5,48 @@
 }
 
 
-
-<div class="row">
-    <div class="col-md-offset-5">
-        <img src="~/images/clean-car (2).png" />
-        <h3 class="login">Prisijungimas</h3>
-    </div>
-</div>
-<hr />
-<div class="row">
-    <div class="col-md-offset-5">
-        <form asp-action="Login">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-
-            <div class="form-group">
-                <label class="control-label login">Prisijungimo vardas</label>
-                <input asp-for="username" class="form-control login" />
-                <span asp-validation-for="username" class="text-danger"></span>
+    <div class="row">
+        <div class="col-md-offset-5">
+            <img src="~/images/clean-car (2).png" />
+        </div>
+        <div style="background-color:darkgray">
+            <div class="col-md-offset-5">
+                <h3 class="login">Prisijungimas</h3>
             </div>
-            <div class="form-group">
-                <label class="control-label login">Slaptažodis</label>
-                <input asp-for="password" class="form-control login" type="password" />
-                <span asp-validation-for="password" class="text-danger"></span>
+            @*<hr />*@
+            <br />
+            <br />
+            <div class="row">
+                <div class="col-md-offset-5">
+                    <form asp-action="Login">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                        <div class="form-group">
+                            <label class="control-label login">Prisijungimo vardas</label>
+                            <input asp-for="username" class="form-control login" />
+                            <span asp-validation-for="username" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label login">Slaptažodis</label>
+                            <input asp-for="password" class="form-control login" type="password" />
+                            <span asp-validation-for="password" class="text-danger"></span>
+                        </div>
+
+                </div>
+
+                <div class="col-md-offset-5">
+                    <div class="form-group">
+                        <input type="submit" value="Prisijungti" class="btn btn-default" />
+                    </div>
+                </div>
+                </form>
+                <div class="col-md-offset-5">
+                    <p class="text-danger">@ViewBag.Error</p>
+                </div>
+
             </div>
-
-    </div>
-
-    <div class="col-md-offset-5">
-        <div class="form-group">
-            <input type="submit" value="Prisijungti" class="btn btn-default" />
         </div>
     </div>
-    </form>
-    <div class="col-md-offset-5">
-        <p class="text-danger">@ViewBag.Error</p>
-    </div>
-
-</div>
-
-
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
